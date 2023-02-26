@@ -17,7 +17,9 @@ var (
 )
 
 func (n *Number)Multiply(val int, res *int)error{
+	LogOut(fmt.Sprintf("got value: %v", val))
 	*res = val * 2
+	LogOut(fmt.Sprintf("result value: %v", *res))
 	return nil
 }
 

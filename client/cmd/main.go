@@ -17,20 +17,28 @@ func main(){
 	if err != nil{
 		log.Fatal(err.Error())
 	}
-	var res numbers.Result
-	err = cl.Call("Number.Division", 5, &res)
+	var resMultiple int
+	err = cl.Call("Number.Multiply", 10, &resMultiple)
 	if err != nil{
 		fmt.Println(err.Error())
 	}
-	fmt.Printf("result of RPC : %v, %v\n", res.Quotient, res.Remain)
+	fmt.Printf("result from RPC(Call Multiply) : %v\n", resMultiple)
 
 
-	call := cl.Go("Number.Division", 5, &res, nil )
+	var resDivision numbers.Result
+	err = cl.Call("Number.Division", 5, &resDivision)
+	if err != nil{
+		fmt.Println(err.Error())
+	}
+	fmt.Printf("result from RPC(Call Division) : %v, %v\n", resDivision.Quotient, resDivision.Remain)
+
+
+	call := cl.Go("Number.Division", 5, &resDivision, nil )
 	<- call.Done
 	if err = call.Error; err != nil{
 		fmt.Println(err)
 
 	}else{
-		fmt.Printf("result of RPC : %v, %v\n", res.Quotient, res.Remain)
+		fmt.Printf("result of RPC(Go Division) : %v, %v\n", resDivision.Quotient, resDivision.Remain)
 	}
 }

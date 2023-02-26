@@ -1,4 +1,6 @@
-INFO :2023/02/26 11:46:59 got value: 5
-INFO :2023/02/26 11:46:59 resultStruct.Quotient, resultStruct.Remain : 2, 1
-INFO :2023/02/26 11:46:59 got value: 5
-INFO :2023/02/26 11:46:59 resultStruct.Quotient, resultStruct.Remain : 2, 1
+INFO :2023/02/26 13:12:15 got value: 10
+INFO :2023/02/26 13:12:15 result value: 20
+INFO :2023/02/26 13:12:15 got value: 5
+INFO :2023/02/26 13:12:15 resultStruct.Quotient, resultStruct.Remain : 2, 1
+INFO :2023/02/26 13:12:15 got value: 5
+INFO :2023/02/26 13:12:15 resultStruct.Quotient, resultStruct.Remain : 2, 1
